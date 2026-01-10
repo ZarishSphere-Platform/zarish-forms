@@ -71,16 +71,20 @@ Interoperable by design.
 
 
 ```text
+
 Spreadsheet (Google Sheets / Excel)
 ↓
 Zarish Forms (Go 1.25)
 ↓
 Canonical JSON Schemas (Truth)
-↓ ┌─────────────┬─────────────┬─────────────┐ │ Frontend UI │ Backend     │ Interop     │ │ (React)     │ Artifacts   │ (FHIR)      │ └─────────────┴─────────────┴─────────────┘
+↓
+ ┌─────────────┬─────────────┬─────────────┐ │ Frontend UI │ Backend     │ Interop     │ │ (React)     │ Artifacts   │ (FHIR)      │ └─────────────┴─────────────┴─────────────┘
+
 ```
 
 
 ---
+
 
 ## 🧰 Technology Stack (Authoritative)
 
@@ -116,6 +120,7 @@ Canonical JSON Schemas (Truth)
 
 
 text```
+
 zarish-forms/
 ├─ README.md
 ├─ VERSION
@@ -136,6 +141,7 @@ zarish-forms/
 ├─ internal/            # Go core logic
 │
 └─ .github/workflows/   # CI & governance
+
 ```
 
 
@@ -319,4 +325,6 @@ All contributors MUST follow these standards:
 It is a governance standard for humanitarian software, designed to outlive technologies, teams, and funding cycles.
 
 **If it is not defined in Zarish Forms, it does not exist in ZarishSphere.**
+
+---
 
