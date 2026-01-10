@@ -1,0 +1,48 @@
+{
+  "$schema": "https://zarishsphere.org/schemas/zarish-form.schema.json",
+  "schema_version": "1.0.0",
+  "module": "EMR",
+  "domain": "clinical",
+  "form_id": "patient_registration",
+  "form_title": "Patient Registration",
+  "audit_level": "strict",
+  "fields": [
+    {
+      "name": "patient_id",
+      "label": "Patient ID",
+      "type": "string",
+      "required": true,
+      "validation": {
+        "regex": "^[A-Z0-9-]+$"
+      },
+      "ui": {
+        "component": "input",
+        "section": "Identification",
+        "order": 1
+      }
+    },
+    {
+      "name": "date_of_birth",
+      "label": "Date of Birth",
+      "type": "date",
+      "required": true,
+      "ui": {
+        "component": "datepicker",
+        "section": "Demographics",
+        "order": 2
+      }
+    },
+    {
+      "name": "gender",
+      "label": "Gender",
+      "type": "enum",
+      "required": true,
+      "enum_values": ["male", "female", "other"],
+      "ui": {
+        "component": "select",
+        "section": "Demographics",
+        "order": 3
+      }
+    }
+  ]
+}
