@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "module": "Finance",
+  "domain": "finance",
+  "form_id": "expense_claim",
+  "form_title": "Expense Claim",
+  "fields": [
+    {
+      "name": "claim_id",
+      "label": "Claim ID",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "amount",
+      "label": "Amount",
+      "type": "number",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "name": "reason",
+      "label": "Reason",
+      "type": "text",
+      "required": true
+    }
+  ]
+}
