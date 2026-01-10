@@ -71,16 +71,12 @@ Interoperable by design.
 
 
 ```text
-
 Spreadsheet (Google Sheets / Excel)
 ↓
 Zarish Forms (Go 1.25)
 ↓
 Canonical JSON Schemas (Truth)
-↓
- ┌─────────────┬─────────────┬─────────────┐ │ Frontend UI │ Backend     │ Interop     │ │ (React)     │ Artifacts   │ (FHIR)      │ └─────────────┴─────────────┴─────────────┘
-
-```
+↓ ┌─────────────┬─────────────┬─────────────┐ │ Frontend UI │ Backend     │ Interop     │ │ (React)     │ Artifacts   │ (FHIR)      │ └─────────────┴─────────────┴─────────────┘```
 
 
 ---
@@ -119,8 +115,7 @@ Canonical JSON Schemas (Truth)
 ## 📦 Repository Structure
 
 
-text```
-
+```text
 zarish-forms/
 ├─ README.md
 ├─ VERSION
@@ -141,7 +136,6 @@ zarish-forms/
 ├─ internal/            # Go core logic
 │
 └─ .github/workflows/   # CI & governance
-
 ```
 
 
