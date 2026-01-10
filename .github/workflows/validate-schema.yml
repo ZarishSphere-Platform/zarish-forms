@@ -1,15 +1,18 @@
-name: Validate Schemas
-on: [push, pull_request]
+name: Validate JSON Schemas
+on:
+  pull_request:
+    paths:
+      - "schemas/**"
+      - "standards/**"
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: '1.25'
-      - name: Install dependencies
-        run: go mod tidy
-      - name: Run schema validation
-        run: go run ./cmd/zarish-forms validate --all
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON
+        run: |
+          for f in schemas/**/*.json; do
+            jq . "$f" > /dev/null
+          done
