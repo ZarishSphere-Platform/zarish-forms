@@ -1,4 +1,5 @@
-Zarish Forms Platform (ZFP)
+# Zarish Forms Platform (ZFP)
+
 
 Spreadsheet‑Driven, No‑Code Form & App Generation System
 
@@ -11,7 +12,10 @@ Audience: NGO Operators, Non‑Coders, Architects, Contributors
 
 1️⃣ Treat zarish-forms as a PLATFORM (Not a Repo)
 
-Platform Purpose
+
+---
+
+# Purpose
 
 zarish-forms is the canonical form, schema, and app‑definition platform for all ZarishSphere modules.
 
@@ -30,6 +34,8 @@ Workflow triggers
 
 Canonical Repository Structure
 
+text
+'''
 zarish-forms/
 ├─ README.md
 ├─ spreadsheets/          # Raw NGO-friendly inputs
@@ -56,6 +62,7 @@ zarish-forms/
 │
 └─ .github/workflows/
    └─ validate-forms.yml
+'''
 
 
 ---
@@ -103,6 +110,8 @@ Strict, versioned, validated
 
 🔹 Zarish Form Schema v1 (Copy‑Paste)
 
+json
+'''
 {
   "$schema": "https://zarishsphere.org/schemas/form.schema.json",
   "schema_version": "1.0.0",
@@ -134,6 +143,9 @@ Strict, versioned, validated
     }
   ]
 }
+'''
+
+---
 
 This schema feeds:
 
@@ -204,6 +216,8 @@ NGO reputation
 
 .github/workflows/validate-forms.yml
 
+yml
+'''
 name: Validate Zarish Forms
 
 on:
@@ -222,6 +236,10 @@ jobs:
           for file in schemas/**/*.json; do
             jq . "$file" > /dev/null
           done
+'''
+
+---
+
 
 Later you can add:
 
