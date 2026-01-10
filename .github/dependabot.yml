@@ -1,0 +1,16 @@
+version: 2
+updates:
+  # Go modules
+  - package-ecosystem: "gomod"
+    directory: "/" # location of go.mod
+    schedule:
+      interval: "weekly"
+
+  # npm / frontend packages
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "react" # optionally pin
+        versions: ["<18.0.0"]
