@@ -1,21 +1,6 @@
-# Default owners for the whole repo
-*       @ZarishSphere-Platform-Maintainers
+* @ZarishSphere-Platform-Maintainers
 
-# Schema files
-/schemas/     @Schema-Team
-
-# Spreadsheet templates
-/spreadsheets/ @NGO-Editors
-
-# Previews (HTML / React)
-/previews/    @Frontend-Team
-
-# Workflows
-/workflows/   @Workflow-Team
-
-# Standards & Governance
-/standards/   @Governance-Team
-
-# CLI / internal Go logic
-/cmd/         @Backend-Team
-/internal/    @Backend-Team
+internal/ @Backend-Team
+schemas/ @Schema-Team
+workflows/ @Workflow-Team
+standards/ @Governance-Team
