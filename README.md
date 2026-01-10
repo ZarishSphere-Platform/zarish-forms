@@ -69,19 +69,23 @@ Interoperable by design.
 
 
 
-## 🧱 High-Level Architecture
+## 🧱 High-Level Architecture Flow
 
+
+The end-to-end flow of Zarish Forms:
 
 ```text
 Spreadsheet (Google Sheets / Excel)
-↓
-Zarish Forms (Go 1.25)
-↓
+        ↓
+   Zarish Forms (Go 1.25 Compiler)
+        ↓
 Canonical JSON Schemas (Truth)
-↓ ┌─────────────┬─────────────┬─────────────┐ │ Frontend UI │ Backend     │ Interop     │ │ (React)     │ Artifacts   │ (FHIR)      │ └─────────────┴─────────────┴─────────────┘
+        ↓
+ ┌───────────────────┬───────────────────┬───────────────────┐
+ │ Frontend UI        │ Backend Artifacts │ Interoperability  │
+ │ (React / Next.js)  │ (Go 1.25)        │ (FHIR R4)        │
+ └───────────────────┴───────────────────┴───────────────────┘
 ```
-
-
 
 ---
 
@@ -157,18 +161,15 @@ All contributors MUST follow these standards:
 
 
 ```text
-
 | Standard | Description |
 | :--- | :--- |
-
 | spreadsheet.standard.md | How NGOs define forms |
 | schema.standard.md | Canonical JSON schema rules |
 | ui.standard.md | UI rendering rules |
-```
 | validation.standard.md | Validation grammar |
 | Workflow standard | State & approval rules |
 | FHIR mapping | Interoperability alignment |
-
+```
 
 
 *Any change violating standards will be rejected.*
