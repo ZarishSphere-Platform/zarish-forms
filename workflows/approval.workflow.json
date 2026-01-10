@@ -1,0 +1,22 @@
+{
+  "workflow_id": "standard_approval",
+  "version": "1.0.0",
+  "states": ["draft", "submitted", "approved", "rejected"],
+  "transitions": [
+    {
+      "from": "draft",
+      "to": "submitted",
+      "event": "on_submit"
+    },
+    {
+      "from": "submitted",
+      "to": "approved",
+      "role": "manager"
+    },
+    {
+      "from": "submitted",
+      "to": "rejected",
+      "role": "manager"
+    }
+  ]
+}
