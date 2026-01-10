@@ -1,0 +1,18 @@
+name: Generate Previews
+on: [push, pull_request]
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25'
+      - name: Generate Previews
+        run: go run ./cmd/zarish-forms generate-preview
+      - name: Commit Previews
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update previews"
+          branch: ${{ github.ref_name }}
