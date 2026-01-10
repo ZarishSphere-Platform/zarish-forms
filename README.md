@@ -64,7 +64,9 @@ Interoperable by design.
 > Zarish Forms **defines**.
 > ZarishSphere services **execute**.
 
+
 ---
+
 
 
 ## 🧱 High-Level Architecture
@@ -76,10 +78,13 @@ Spreadsheet (Google Sheets / Excel)
 Zarish Forms (Go 1.25)
 ↓
 Canonical JSON Schemas (Truth)
-↓ ┌─────────────┬─────────────┬─────────────┐ │ Frontend UI │ Backend     │ Interop     │ │ (React)     │ Artifacts   │ (FHIR)      │ └─────────────┴─────────────┴─────────────┘```
+↓ ┌─────────────┬─────────────┬─────────────┐ │ Frontend UI │ Backend     │ Interop     │ │ (React)     │ Artifacts   │ (FHIR)      │ └─────────────┴─────────────┴─────────────┘
+```
+
 
 
 ---
+
 
 
 ## 🧰 Technology Stack (Authoritative)
@@ -112,7 +117,9 @@ Canonical JSON Schemas (Truth)
 ---
 
 
+
 ## 📦 Repository Structure
+
 
 
 ```text
@@ -139,7 +146,9 @@ zarish-forms/
 ```
 
 
+
 ---
+
 
 
 ## 📘 Standards (MANDATORY READING)
@@ -160,6 +169,7 @@ All contributors MUST follow these standards:
 
 
 *Any change violating standards will be rejected.*
+
 
 
 ---
