@@ -1,0 +1,12 @@
+{
+  "workflow_id": "record_lifecycle",
+  "version": "1.0.0",
+  "states": ["active", "archived"],
+  "transitions": [
+    {
+      "from": "active",
+      "to": "archived",
+      "role": "admin"
+    }
+  ]
+}
