@@ -1,6 +1,6 @@
 module github.com/zarishsphere/zarish-forms
 
-go 1.23.0
+go 1.25.0
 
 require gorm.io/gorm v1.31.1
 
