@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "module": "HR",
+  "domain": "administrative",
+  "form_id": "staff_profile",
+  "form_title": "Staff Profile",
+  "fields": [
+    {
+      "name": "staff_id",
+      "label": "Staff ID",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "full_name",
+      "label": "Full Name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "designation",
+      "label": "Designation",
+      "type": "string",
+      "required": true
+    }
+  ]
+}
