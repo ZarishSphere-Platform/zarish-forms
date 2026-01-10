@@ -156,12 +156,15 @@ zarish-forms/
 All contributors MUST follow these standards:
 
 
+```text
+
 | Standard | Description |
 | :--- | :--- |
 
 | spreadsheet.standard.md | How NGOs define forms |
 | schema.standard.md | Canonical JSON schema rules |
 | ui.standard.md | UI rendering rules |
+```
 | validation.standard.md | Validation grammar |
 | Workflow standard | State & approval rules |
 | FHIR mapping | Interoperability alignment |
