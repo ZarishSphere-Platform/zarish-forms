@@ -1,71 +1,121 @@
-Zarish Forms Platform (ZFP)
-Zarish Forms is the canonical, spreadsheet-first, schema-driven, no-code Form & App Definition Platform for the ZarishSphere – NGO Operations Platform.
+# Zarish Forms Platform (ZFP)
+
+
+**Zarish Forms** is the canonical, spreadsheet-first, schema-driven, no-code Form & App Definition Platform for the ZarishSphere – NGO Operations Platform.
 
 It enables NGOs, governments, and humanitarian programs to define forms, data models, validation rules, UI behavior, workflows, and interoperability mappings using Google Sheets / Excel, without writing code.
 
 Zarish Forms is a governance layer, not a data system.
 
-🌍 Why Zarish Forms Exists
+---
+
+## 🌍 Why Zarish Forms Exists
+
 Humanitarian software often fails because:
 
-Forms are hard-coded
-Changes require developers
-Validation is inconsistent
-Audits are difficult
-Interoperability is an afterthought
-Zarish Forms solves this by making forms a standard, not an implementation.
+- Forms are hard-coded
+- Changes require developers
+- Validation is inconsistent
+- Audits are difficult
+- Interoperability is an afterthought
+- Zarish Forms solves this by making forms a standard, not an implementation.
 
-🎯 Core Principles (Non-Negotiable)
-Spreadsheet First
+---
+
+
+## 🎯 Core Principles (Non-Negotiable)
+
+1. **Spreadsheet First**
 NGOs define everything in tabular formats they already know.
 
-Schema as Truth
+2. **Schema as Truth**
 Canonical JSON schemas are the single source of technical truth.
 
-Preview Before Deploy
+3. **Preview Before Deploy**
 Nothing goes live without human validation.
 
-GitHub Native Governance
+4. **GitHub Native Governance**
 Versioned, auditable, reviewable.
 
-Domain Agnostic
+5. **Domain Agnostic**
 Health, HR, Finance, M&E, Education, Relief.
 
-FHIR Aligned, Not Locked
+6. **FHIR Aligned, Not Locked**
 Interoperable by design.
 
-🧠 What Zarish Forms IS (and IS NOT)
-✅ Zarish Forms IS
-A form definition platform
-A schema factory
-A UI & API contract generator
-A validation and governance layer
-❌ Zarish Forms is NOT
-A database
-A production backend
-A workflow execution engine
-An EMR / HR / Finance system
-Zarish Forms defines.
-ZarishSphere services execute.
 
-🧱 High-Level Architecture
-Spreadsheet (Google Sheets / Excel) ↓ Zarish Forms (Go 1.25) ↓ Canonical JSON Schemas (Truth) ↓ ┌─────────────┬─────────────┬─────────────┐ │ Frontend UI │ Backend     │ Interop     │ │ (React)     │ Artifacts   │ (FHIR)      │ └─────────────┴─────────────┴─────────────┘
-🧰 Technology Stack (Authoritative)
-Core Platform
-Language: Go 1.25
-Schema Standard: JSON Schema (2020-12)
-Spreadsheet Parsing: excelize
-Schema Validation: santhosh-tekuri/jsonschema
-Workflow Model: JSON state machines
-Frontend (Preview & UX)
-React 18
-Next.js 14
-Schema-driven rendering
-Interoperability
-HL7 FHIR R4 (aligned)
-OpenMRS compatible concepts
-DHIS2-friendly exports
-📦 Repository Structure
+---
+
+
+## 🧠 What Zarish Forms IS (and IS NOT)
+
+### ✅ Zarish Forms IS**
+- A form definition platform
+- A schema factory
+- A UI & API contract generator
+- A validation and governance layer
+
+### ❌ Zarish Forms is NOT**
+- A database
+- A production backend
+- A workflow execution engine
+- An EMR / HR / Finance system
+
+> Zarish Forms **defines**.
+> ZarishSphere services **execute**.
+
+---
+
+
+## 🧱 High-Level Architecture
+
+
+```text
+Spreadsheet (Google Sheets / Excel)
+↓
+Zarish Forms (Go 1.25)
+↓
+Canonical JSON Schemas (Truth)
+↓ ┌─────────────┬─────────────┬─────────────┐ │ Frontend UI │ Backend     │ Interop     │ │ (React)     │ Artifacts   │ (FHIR)      │ └─────────────┴─────────────┴─────────────┘
+```
+
+
+---
+
+## 🧰 Technology Stack (Authoritative)
+
+**Core Platform**
+
+- Language: Go 1.25
+
+- Schema Standard: JSON Schema (2020-12)
+
+- Spreadsheet Parsing: excelize
+
+- Schema Validation: santhosh-tekuri/jsonschema
+
+- Workflow Model: JSON state machines
+
+- Frontend (Preview & UX): React 18,  Next.js 14
+
+- Schema-driven rendering
+
+- Interoperability
+
+- HL7 FHIR R4 (aligned)
+
+- OpenMRS compatible concepts
+
+- DHIS2-friendly exports
+
+
+---
+
+
+## 📦 Repository Structure
+
+
+text```
 zarish-forms/
 ├─ README.md
 ├─ VERSION
@@ -86,126 +136,187 @@ zarish-forms/
 ├─ internal/            # Go core logic
 │
 └─ .github/workflows/   # CI & governance
-📘 Standards (MANDATORY READING)
+```
+
+
+---
+
+
+## 📘 Standards (MANDATORY READING)
+
 All contributors MUST follow these standards:
-Standard Description
 
-spreadsheet.standard.md How NGOs define forms
-schema.standard.md Canonical JSON schema rules
-ui.standard.md UI rendering rules
-validation.standard.md Validation grammar
-Workflow standard State & approval rules FHIR mapping Interoperability alignment
-Any change violating standards will be rejected.
 
-🧾 Spreadsheet-First Model
-One spreadsheet = one form
+| Standard | Description |
+| :--- | :--- |
 
-One row = one field
+| spreadsheet.standard.md | How NGOs define forms |
+| schema.standard.md | Canonical JSON schema rules |
+| ui.standard.md | UI rendering rules |
+| validation.standard.md | Validation grammar |
+| Workflow standard | State & approval rules |
+| FHIR mapping | Interoperability alignment |
 
-No formulas
 
-No macros
 
-Values only
+*Any change violating standards will be rejected.*
 
-This makes Zarish Forms usable by:
-NGO field staff
 
-Program officers
+---
 
-Health workers
 
-Administrators
+## 🧾 Spreadsheet-First Model
 
-🔐 Governance & Safety
-Zarish Forms enforces:
-Mandatory schema validation
+- One spreadsheet = one form
 
-Mandatory preview generation
+- One row = one field
 
-Mandatory human approval
+- No formulas
 
-Mandatory GitHub review
+- No macros
 
-Immutable schema history
+- Values only
 
-No silent changes.
-No production surprises.
-🔁 Lifecycle (End-to-End)
-NGO fills spreadsheet
 
-Spreadsheet committed to GitHub
+**This makes Zarish Forms usable by:**
 
-Go compiler generates schema
+- NGO field staff
 
-Schema validated (CI)
+- Program officers
 
-Preview generated
+- Health workers
 
-Human approval
+- Administrators
 
-Downstream services consume schema
+---
 
-🧬 FHIR & Interoperability
-Zarish Forms aligns with:
-FHIR R4
 
-Patient, Encounter, Observation, Practitioner
+## 🔐 Governance & Safety
 
-Questionnaire / QuestionnaireResponse
 
-FHIR is supported, not enforced.
+### Zarish Forms enforces:
 
-🗺️ Module Rollout Strategy
-ZarishSphere modules adopt Zarish Forms in phases:
-EMR (core health)
+- Mandatory schema validation
 
-HR
+- Mandatory preview generation
 
-Finance
+- Mandatory human approval
 
-Programs & M&E
+- Mandatory GitHub review
 
-Education & Relief
+- Immutable schema history
 
-Each module is:
-Independent
+**No silent changes**.
 
-Versioned
+**No production surprises**.
 
-Auditable
 
-👥 Who This Is For
-NGOs & INGOs
+---
 
-Government health systems
 
-Donors & auditors
+## 🔁 Lifecycle (End-to-End)
 
-Platform engineers
+- NGO fills spreadsheet
 
-Long-term humanitarian programs
+- Spreadsheet committed to GitHub
 
-📜 Versioning Policy
-MAJOR → breaking schema changes
+- Go compiler generates schema
 
-MINOR → backward-compatible additions
+- Schema validated (CI)
 
-PATCH → metadata / documentation
+- Preview generated
 
-🤝 Contribution Rules
-No direct schema editing
+- Human approval
 
-No skipping previews
+- Downstream services consume schema
 
-No bypassing standards
+---
 
-No undocumented changes
 
-Zarish Forms is a shared public good.
-🏁 Final Statement
-Zarish Forms is not a form builder.
+## 🧬 FHIR & Interoperability
+
+### Zarish Forms aligns with:
+
+**FHIR R4**
+
+- Patient, Encounter, Observation, Practitioner
+
+- Questionnaire / QuestionnaireResponse
+
+
+*FHIR is supported, not enforced.*
+
+---
+
+
+## 🗺️ Module Rollout Strategy
+
+**ZarishSphere modules adopt Zarish Forms in phases:**
+
+- EMR (core health)
+
+- HR
+
+- Finance
+
+- Programs & M&E
+
+- Education & Relief
+
+**Each module is:**
+
+- Independent
+
+- Versioned
+
+- Auditable
+
+---
+
+## 👥 Who This Is For
+
+- NGOs & INGOs
+
+- Government health systems
+
+- Donors & auditors
+
+- Platform engineers
+
+- Long-term humanitarian programs
+
+---
+
+## 📜 Versioning Policy
+
+- **MAJOR** → breaking schema changes
+
+- **MINOR** → backward-compatible additions
+
+- **PATCH** → metadata / documentation
+
+---
+
+## 🤝 Contribution Rules
+
+- No direct schema editing
+
+- No skipping previews
+
+- No bypassing standards
+
+- No undocumented changes
+
+
+**Zarish Forms is a shared public good.**
+
+---
+
+
+## 🏁 Final Statement
+
+**Zarish Forms** is not a form builder.
 It is a governance standard for humanitarian software, designed to outlive technologies, teams, and funding cycles.
 
-If it is not defined in Zarish Forms, it does not exist in ZarishSphere.
+**If it is not defined in Zarish Forms, it does not exist in ZarishSphere.**
 
